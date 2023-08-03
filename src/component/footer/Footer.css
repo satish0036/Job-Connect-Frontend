@@ -1,0 +1,38 @@
+/* Footer.css */
+
+.footer {
+    /* background-color: #007bff; */
+    background-color: cadetblue;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    width:auto;
+    
+   
+  }
+
+  
+  .footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .footer-links {
+    margin-top: 10px;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 14px;
+  }
+  
+  /* Media queries for responsiveness */
+  @media screen and (max-width: 768px) {
+    .footer p,
+    .footer-links a {
+      font-size: 12px;
+    }
+  }
+  

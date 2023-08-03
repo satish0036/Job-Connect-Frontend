@@ -1,0 +1,50 @@
+/* **********************SignUpMain**************** */
+.signupmain {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+      ),
+      url("https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80");
+    background-size: cover;
+    background-position: center;
+    border: 2px solid rgb(197, 190, 190);
+    padding: 10px;
+  }
+ 
+  .signupmain form{
+      background-color: white;
+      padding: 0px 60px;
+      border-radius: 10px;
+  }
+  
+  .signupmain h1{
+      color: rgb(77, 1, 77);
+      text-align: center;
+  }
+  
+  .signupmain button{
+      width: 100%;
+      height: 50px;
+      padding: 10px;
+      border: none;
+      background-color: rebeccapurple;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 15px;
+      margin-bottom: 10px;
+     
+  }
+  .signupmain h4{
+    color: rgb(77, 1, 77);
+    text-align: center;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,128 @@
+.job-row {
+    width: 98%;
+    /* border: 1px solid #e41010; */
+    margin-bottom: 10px;
+    padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(51, 67, 89);
+    /* border: 2px solid red; */
+  }
+  
+  .job-info {
+    width: 100%;
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .job-info > div {
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    flex: auto;
+    padding: 10px;
+    margin: 2px;
+    background-color: beige;
+    color: black;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease; 
+
+  }
+  .company-registration{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: auto;
+    padding: 10px;
+    margin: 2px;
+    background-color: rgb(235, 239, 233);
+    color: black;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.6s ease; 
+  }
+  .company-website{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: auto;
+    padding: 10px;
+    margin: 2px;
+    background-color: rgb(235, 239, 233);
+    color: black;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.6s ease; 
+  }
+  .company-registration:hover{
+    background-color: #4e5353; 
+    color: white;
+    cursor: pointer;
+    transition: background-color .6s ease; 
+  }
+ 
+  .company-website:hover{
+    background-color:  #4e5d5d; 
+    color: white;
+    cursor: pointer;
+  }
+ 
+  .company-details:hover {
+    background-color: #0056b3; 
+    color: white;
+  }
+ 
+  .job-details-card {
+    width: 100%;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    padding: 10px;
+  }
+  .delete{
+    margin-top: 5px;
+    margin-right: 10px;
+    padding:5px  15px;
+    color: white;
+    background-color: rgb(246, 36, 36);
+    cursor: pointer;
+    border: none;
+  }
+  .update{
+    margin-top: 5px;
+    margin-right: 10px;
+    padding:5px  15px;
+    color: white;
+    background-color: rgb(49, 117, 180);
+    border: none;
+    cursor: pointer;
+  }
+  @media screen and (max-width: 768px) {
+    .job-info {
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+  }
+ 
+  
+  
+  
+  
+  
+  
+  
+  

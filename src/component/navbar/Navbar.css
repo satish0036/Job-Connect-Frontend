@@ -1,0 +1,78 @@
+/* Navbar.css */
+
+.navbar {
+  background-color:black;
+  color: #fff;
+  padding: 9px;
+  position: sticky;
+  width: auto;
+  top: 0;
+  opacity: 1;
+  z-index: 40;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 400;
+  /* border: 2px solid rgb(67, 43, 91); */
+  
+}
+
+.navbar-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.profileImg{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Media Query for responsiveness */
+@media screen and (max-width: 1000px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 57px;
+    left: 0;
+    width: 100%;
+    background-color: #4e4a4a;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
