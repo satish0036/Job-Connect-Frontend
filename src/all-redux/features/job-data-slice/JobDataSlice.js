@@ -7,6 +7,16 @@ export const JobDataSlice = createSlice({
     addData: (state, action) => {
       state.JobData = action.payload;
     },
+    addNewJob:(state,action)=>{
+      return {
+        ...state,
+        JobData: [...state.JobData, action.payload]
+      };
+      // or
+      // addNewJob: (state, action) => {
+      //   state.JobData = [...state.JobData, action.payload];
+      // }
+    },
     editJobs: (state, action) => {
       const { id, updatedData } = action.payload;
 
@@ -32,5 +42,5 @@ export const JobDataSlice = createSlice({
   },
 });
 
-export const { addData ,editJobs,deleteJob} = JobDataSlice.actions;
+export const { addData ,addNewJob,editJobs,deleteJob} = JobDataSlice.actions;
 export default JobDataSlice.reducer;

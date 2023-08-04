@@ -1,11 +1,12 @@
 import { useState } from "react";
 import "./JobProviderForm.css";
 import JobProviderFormInput from "./JobProviderFormInput.js"
-import { useSelector } from 'react-redux'
+import { useSelector ,useDispatch} from 'react-redux'
 import { useNavigate } from "react-router-dom"
 import axios from "axios";
 import { BASE_URL } from "../helper.js";
 import { useRef } from 'react';
+import { addNewJob } from "../../all-redux/features/job-data-slice/JobDataSlice";
 const JobProviderForm = () => {
     const userData = useSelector((state) => state.newLocalStoreData)
     const [values, setValues] = useState({
@@ -231,6 +232,7 @@ const JobProviderForm = () => {
         },
 
     ];
+    const dispatch=useDispatch()
     const navigate = useNavigate()
     // const name = useSelector((state) => state.newData)
     // console.log(name)
@@ -240,19 +242,16 @@ const JobProviderForm = () => {
         e.preventDefault();
         // Get the form element using the ref
         const formElement = formRef.current;
-
         // Reset the form to its initial state
         formElement.reset();
         try {
             await axios.post(`${BASE_URL}/api/post/addJob`, values)
-            navigate("/")
+            dispatch(addNewJob(values))
+            navigate("/profile")
         }
         catch (err) {
             console.log(err)
         }
-
-        console.log(values)
-        navigate("/jobpage")
     };
 
     const onChange = (e) => {

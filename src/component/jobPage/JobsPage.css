@@ -12,4 +12,34 @@
     /* margin: 10px; */
     padding: 10px;
   }
+  .search-layout{
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 15px;
+  }
+  .search-bar{
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background-color: rgb(208, 201, 214);
+    font-weight: 300;
+    flex:1;
+  }
+ 
+  @media screen and (max-width: 768px){
+    .search-layout{
+      display: flex;
+      gap: 0px;
+      flex-direction: column;
+      justify-content:center;
+      align-items: center;
+      padding: 10px;
+    }
+    .search-bar {
+      width: 70%;
+  
+    }
+}
  
