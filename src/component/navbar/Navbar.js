@@ -59,7 +59,7 @@ const Navbar = () => {
           <Link to="/about">About</Link>
 
           {/* <Link to="/notfound">Services</Link> */}
-          <Link to="/notfound">Contact</Link>
+          <Link to="/contact">Contact</Link>
 
           {/* Conditionally rendering "Logout" or "Log In" link based on user authentication status */}
           {userData.id ?

@@ -17,6 +17,8 @@ import { addData } from './all-redux/features/job-data-slice/JobDataSlice';
 import axios from 'axios';
 import { useEffect } from 'react';
 import { BASE_URL } from './component/helper';
+import Disclaimer from './component/disclaimer/Disclaimer';
+import Contact from './component/contact/Contact';
 
 import {
   createBrowserRouter,
@@ -31,13 +33,7 @@ const Layout = () => {
     <Footer />
   </>)
 }
-const Layout1 = () => {
-  return (<>
-    {/* <Navbar /> */}
-    <Outlet />
-    {/* <Footer/> */}
-  </>)
-}
+
 // Creating the main router configuration with nested routes
 const router = createBrowserRouter([
   {
@@ -83,32 +79,20 @@ const router = createBrowserRouter([
       {
         path: "/editjobmain/:id",
         element: <EditJobMain />
+      },
+      {
+        path:"/disclaimer",
+        element:<Disclaimer/>
+      },
+      {
+        path:"/contact",
+        element:<Contact/>
       }
     ]
   },
 
 ]);
-// Creating an alternative router configuration with nested routes for a different layout
-const router1 = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout1 />,
-    children: [
-      {
-        path: "/",
-        element: <LoginMain />
-      },
-      {
-        path: "/signupmain",
-        element: <SignUpMain />
-      },
-      {
-        path: "/profile",
-        element: <Profile />
-      },
-    ]
-  }
-]);
+
 
 function App() {
   const dispatch = useDispatch()
@@ -126,7 +110,7 @@ function App() {
       }
     };
     fetchUserData();
-  }, [userSignUpData.id]);
+  },[userSignUpData.id]);
 
   // useEffect hook to fetch all jobs from the server
   useEffect(() => {
@@ -145,7 +129,6 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router} />
-      {/* {userSignUpData.id ? (<RouterProvider router={router} />) : (<RouterProvider router={router1} />)} */}
     </div>
   );
 }

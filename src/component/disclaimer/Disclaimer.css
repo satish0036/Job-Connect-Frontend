@@ -1,0 +1,14 @@
+/* Base styles for larger screens */
+.disclaimer-container {
+
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ccc;
+  }
+  
+  .disclaimer-content {
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  
